@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Image Slider | CodeByGaurav</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/1.jpg" alt="Slider Image" id="img">
+
+        <div class="overlay"></div>
+
+        <button class="slide-btn prev" onclick="leftSlide()">
+            <span>&#8249</span>
+        </button>
+
+        <button class="slide-btn next" onclick="rightSlide()">
+            <span>&#8250</span>
+        </button>
+
+        <div class="slider-info">
+            <div>
+                <p>EXPLORE</p>
+                <h2>Discover something new</h2>
+            </div>
+
+            <div class="counter">
+                <span id="current">01</span>
+                <i></i>
+                <span id="total">05</span>
+            </div>
+        </div>
+
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
