@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #020617, #000);
+    color: #fff;
+}
+
+.stopwatch{
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 22px;
+    width: 360px;
+    padding: 35px 30px 40px;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+    position: relative;
+}
+
+.stopwatch::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 22px;
+    padding: 1px;
+    background: linear-gradient(135deg, #2dd4bf, #38dbf8, #6366f1);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 00);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    pointer-events: none;
+}
+
+.title{
+    font-size: 22px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #2dd4bf, #38dbf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.subtitle{
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 26px;
+}
+
+.time{
+    font-size: 46px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+button{
+    height: 52px;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #020617;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+button i{
+    font-size: 16px;
+}
+
+button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.start{
+    background: linear-gradient(135deg, #2dd4bf, #14b8a6);
+}
+
+.stop{
+    background: linear-gradient(135deg, #fb7185, #f43f5e);
+}
+
+.reset{
+    background: linear-gradient(135deg, #38dbf8, #0ea5e9);
+}

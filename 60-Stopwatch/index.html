@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeByGaurav | Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <div class="stopwatch">
+        <div class="title">
+            <i class="fa-solid fa-stopwatch"></i> Pro Stopwatch
+        </div>
+        <div class="subtitle">Smart Icon Toggle (Play / Pause)</div>
+        <div class="time" id="display">00:00:00</div>
+        <div class="buttons">
+            <button class="start" id="toggleBtn" onclick="toggleTimer()">
+                <i class="fa-solid fa-play" id="toggleIcon"></i>
+                <span id="toggleText">Start</span>
+            </button>
+
+            <button class="stop" onclick="stopTimer()">
+                <i class="fa-solid fa-stop"></i> Stop
+            </button>
+            <button class="reset" onclick="resetTimer()">
+                <i class="fa-solid fa-rotate-right"></i> Reset
+            </button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
